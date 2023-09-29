@@ -3,6 +3,7 @@ import { getAll } from '../Utilitis/api'
 import { useQuery } from 'react-query'
 import { Link } from 'react-router-dom';
 import Loading from './loading';
+import GoogleStyleLoading from './GoogleStyleLoading';
 
 const Show = () => {
 
@@ -13,7 +14,8 @@ const Show = () => {
 
   if (isLoading) {
     
-    return <Loading />;
+    // return <Loading />;
+    return <GoogleStyleLoading />;
 
   }
 
