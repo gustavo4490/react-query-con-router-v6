@@ -2,6 +2,7 @@ import React from 'react';
 import { useQuery } from 'react-query';
 import { Link, useParams } from 'react-router-dom';
 import { getById } from '../Utilitis/api';
+import Loading from './loading';
 
 const Details = () => {
   const urlParams = useParams();
@@ -20,7 +21,8 @@ const Details = () => {
   }
 
   if (isLoading) {
-    return <span>cargando....</span>
+    // return <span>cargando....</span>
+    return <Loading />
   }
 
   return (

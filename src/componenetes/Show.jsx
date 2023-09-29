@@ -2,6 +2,7 @@ import React from 'react'
 import { getAll } from '../Utilitis/api'
 import { useQuery } from 'react-query'
 import { Link } from 'react-router-dom';
+import Loading from './loading';
 
 const Show = () => {
 
@@ -11,7 +12,9 @@ const Show = () => {
   }
 
   if (isLoading) {
-    return <span>cargando....</span>
+    
+    return <Loading />;
+
   }
 
 
